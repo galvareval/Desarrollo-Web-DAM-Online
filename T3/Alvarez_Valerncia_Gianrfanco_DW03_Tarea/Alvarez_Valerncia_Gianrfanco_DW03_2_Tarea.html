@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Primer ejercicio de la Tarea DW03 - Gianfranco Álvarez</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//varaibles para almacenar los datos.
+	var nombreApell = '';
+	var diaNacimiento = '';
+	var mesNacimiento = '';
+	var anoNacimiento = '';
+	//función para solicitar los datos mediante prompt.
+	function solicitarDatos()
+	{
+		nombreApell = prompt("Introduzca su nombre y apellidos: ");
+		diaNacimiento = prompt("Introduzca DIA de nacimiento: ");
+		mesNacimiento = prompt("Introduzca MES de nacimiento: ");
+		anoNacimiento = prompt("Introduzca AÑO de nacimiento: ");
+	}
+	//función para imprimir los datos obtenidos.
+	function mostrarDatos()
+	{
+		var anoActual = new Date().getFullYear();//Obtener el año actual.
+		var dias = ["domingo", "lunes", "martes", "miércoles", "jueves", "vierner", "sábado"];//array con días de la semana.
+		var fechaNacimiento = new Date(anoNacimiento,mesNacimiento-1,diaNacimiento);//crear la fecha con los datos obtenidos. Restar 1  a los meses para que cuadre el formato.
+		document.write('Buenos días: ' + nombreApell);
+		document.write("<br/>");
+		document.write('Tu nombre tiene ' + nombreApell.length + ' caracteres, incluidos espacios.');
+		document.write("<br/>");
+		document.write('La primera letra A de tu nombre está en la posición: ' + nombreApell.indexOf('a'));//La primera letra es la posición 0.
+		document.write("<br/>");
+		document.write('La última letra A de tu nombre está en la posición: ' + nombreApell.lastIndexOf('a'));//La primera letra es la posición 0.
+		document.write("<br/>");
+		document.write('Tu nombre menos las 3 primeras letras es:' + nombreApell.substring(0,nombreApell.length-3));//(substring de 0 a total de caracters-3)=quitar los tres últimos caracteres.
+		document.write("<br/>");
+		document.write('Tu nombre todo en mayúsculas es: ' + nombreApell.toUpperCase());
+		document.write("<br/>");
+		document.write('Tu edad es: ' + (anoActual - anoNacimiento));
+		document.write("<br/>");
+		document.write('Naciste un feliz ' + dias[fechaNacimiento.getDay()] + ' del año ' + anoNacimiento );//getDay() devuelve un número, usar array de dias para saber que nombre tiene ese día.
+		document.write("<br/>");
+		document.write('El conseno de 180 es: ' + Math.cos(180));
+		document.write("<br/>");
+		document.write('El número mayor de (24,67,23,76,35,17) es: ' + Math.max(24, 67, 23, 76, 35, 17));
+		document.write("<br/>");
+		document.write('Ejemplo de número al azar: ' + Math.random())
+	}
+	document.title ='Segundo ejercicio de la Tarea DW03 - Gianfranco Álvarez';//Cambiar título 
+	document.write('Segundo ejercicio de la Tarea DW03 - Gianfranco Álvarez');
+	document.write("<hr/>");//Línea para separar.
+	solicitarDatos();//Llamar función para solicitar datos.
+	mostrarDatos();//Llamar función para imprimir los datos.
+	</script>
+</body>
+</html>

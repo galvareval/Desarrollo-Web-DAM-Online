@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Tarea para DW02</title>
+</head>
+<body>
+	<script type="text/javascript">
+		document.write("Tabla del 7");
+		document.write("<br/>");
+		var j=1;//inicialización de la variable para el bucle while
+		var k=1;//inicialización de la variable para el bucle do while
+		for (i=1; i<=10; i++)
+		{
+			document.write("7 x " + i+ " = " + 7*i);
+			document.write("<br/>");	
+		}
+		document.write("<hr/>");//linea para separar resultados
+		document.write("Tabla del 8");
+		document.write("<br/>");
+		while (j<=10)
+		{
+			document.write("8 x " + j+ " = " + 8*j);
+			document.write("<br/>");
+			j=j+1;
+		}
+		document.write("<hr/>");//linea para separar resultados
+		document.write("Tabla del 9");
+		document.write("<br/>");
+		do{
+			document.write("9 x " + k+ " = " + 9*k);
+			document.write("<br/>");
+			k=k+1;
+		}while (k<=10);
+		document.write("<hr/>");//linea para separar resultados
+		document.write("Operaciones empleando desplazamiento de bits");
+		document.write("<br/>");
+		// desplzar 1 bit a la derecha(>>1)= dividir entero entre 2
+		// desplzar 1 bit a la izquierda(<<1)= multiplicar entero por 2
+		document.write("125 / 8 =");
+		document.write(((125>>1)>>1)>>1);//dividir entre 2 x 3 veces= dividir entre 8
+		document.write("<br/>");
+		document.write("40 x 4 =");//multiplicar por 2 x 2 veces= multiplicar por 4
+		document.write((40<<1)<<1);
+		document.write("<br/>");
+		document.write("25 / 2 =");//divir por 2 una vez
+		document.write(25>>1);
+		document.write("<br/>");
+		document.write("10 * 16 =");//multiplicar por 2 x 4 veces= multiplicar por 16
+		document.write((((10<<1)<<1)<<1)<<1);
+		document.write("<br/>");
+	</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Primer ejercicio de la Tarea DW03 - Gianfranco Álvarez</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//Función que crea la nueva ventana.
+	function nuevaVentana()
+	{
+		var w = window.open("", "");//Var w ->nueva ventana.
+		w.document.title = "Ejemplo de nueva ventana";//Cambiar título a nueva ventana
+		var dir = w.document.URL;// var dir->Obtener URL
+		var titulo = w.document.title;// Var titulo -> Obtener título 
+		var protocolo = w.location.protocol;// Var protocolo -> Obtener el protocolo utilizado
+		var codNavegador = navigator.appCodeName;// Var codNavegador -> Obtener el nombre en códgo del navegador
+		var jsDisponible = '' ;// Var jsDisponible -> Para almacenar el estado de Javascript en el navegador
+		//Condicional para saber si JS esta disponible en el navegador.
+		if (w.navigator.javaEnabled() == true)
+			jsDisponible = 'Java SI disponible en esta ventana.';// js esta disponible en el navegador
+		else
+			jsDisponible = 'Java NO disponible en esta ventana.';// js no esta disponible en el navegador
+		//Alert para mostrar los resultados.
+		w.alert('Titulo: ' + titulo + '\nURL Completa: ' + dir + '\nProtocolo utilizado: ' + protocolo + '\nNombre en código del navegador: ' + codNavegador + '\n'+ jsDisponible);
+		//Cargar el iframe.
+		w.document.write('<iframe width="800" height="600" src="https://www.diariodenavarra.es"></iframe>');
+	}
+	document.title ='Primer ejercicio de la Tarea DW03 - Gianfranco Álvarez';//Cambiar título 
+	document.write('Primer ejercicio de la Tarea DW03 - Gianfranco Álvarez');
+	window.onload = nuevaVentana();//Llamar al cargar la página.
+	</script>
+</body>
+</html>
